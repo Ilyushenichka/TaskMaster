@@ -349,7 +349,7 @@ fun showMenu() {
 fun main() {
     while (true) {
         showMenu()
-        val action = prompt("Выберите действие (0-8): ").toIntOrNull()
+        val action = prompt("Выберите действие (0-7): ").toIntOrNull()
         when (action) {
             1 -> { listTasksInteractive(); pressEnterToContinue() }
             2 -> { createTaskInteractive(); pressEnterToContinue() }
@@ -359,7 +359,7 @@ fun main() {
             6 -> { searchTasksInteractive(); pressEnterToContinue() }
             7 -> { statsInteractive(); pressEnterToContinue() }
             0 -> return
-            else -> println("${COLOR_RED}Неверный ввод. Выберите пункт 0-8.${COLOR_RESET}")
+            else -> println("${COLOR_RED}Неверный ввод. Выберите пункт 0-7.${COLOR_RESET}")
         }
     }
 }
